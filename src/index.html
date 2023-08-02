@@ -1,0 +1,55 @@
+---
+layout: "global.html"
+project: [
+  { name: "Train your Computing",
+    year: 2022, link: "https://tyc.kraktoos.com" },
+  { name: "Python Elo System",
+    year: 2021, link: "https://github.com/Kraktoos/Python-Elo-System" }
+]
+---
+
+<h2><marquee>Hey there! I'm Kraktoos 👋 I hope you are having a good day</marquee></h2>
+
+<p>I'm a Portuguese dude that likes programming, Linux, FOSS, self-hosting, minimalism and privacy.</p>
+
+<a href="/about">Learn more about me</a>, <a href="/now">see what I'm up to</a>, <a href="/programs">see what programs I use</a> or <a href="mailto:hello@kraktoos.com">email me</a>.
+
+<h3>Projects</h3>
+
+<ul class="list">
+  {% for item in project %}
+  <li>
+    <em>{{ item.year }}</em>
+    <a href="{{ item.link }}">{{ item.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h3>Writings</h3>
+
+<ul class="list _1">
+  {% for post in collections.post %}
+  <li>
+    <em>{{ post.data.date | date: "%B %-d, %Y" }}</em>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<style>
+  .list {
+    padding-left: 0;
+  }
+  .list > li {
+    display: flex;
+    list-style: none;
+    gap: 0.6rem;
+  }
+  .list > li > em {
+    color: #999;
+    min-width: 3rem;
+  }
+  ._1 > li > em {
+    min-width: 7rem;
+  }
+</style>

@@ -1,0 +1,55 @@
+---
+navbar: [
+  { text: 'Home', link: '/' },
+  { text: 'About', link: '/about/' },
+  { text: 'Now', link: '/now/' },
+  { text: 'GitHub', link: 'https://github.kraktoos.com' },
+  { text: 'Mastodon', link: 'https://mastodon.kraktoos.com' }
+]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <style>
+      html {
+        font-family: sans-serif;
+        line-height: 1.4;
+      }
+      :root {
+        color-scheme: light dark;
+      }
+      a {
+        text-decoration: none;
+        text-underline-offset: 0.2rem;
+        color: #4db5ff;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      nav > a {
+        margin-right: 0.3rem;
+      }
+    </style>
+    <title>{{ title | default: "Kraktoos" }}</title>
+  </head>
+  <body style="max-width: 52rem; margin: 0 auto; padding: 2rem 1rem">
+    <header>
+      <nav>
+        {% for item in navbar %}
+          <a href="{{ item.link }}" 
+          {% if page.url == item.link %}
+            style="font-weight: 600;"
+          {% endif %}
+          
+          >{{ item.text }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+    <main>{{ content }}</main>
+    <footer style="text-align: center;">
+      &copy; {{ "now" | date: "%Y" }} Kraktoos
+    </footer>
+  </body>
+</html>
