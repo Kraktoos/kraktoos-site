@@ -1,5 +1,5 @@
 ---
-title: 'Programs I Use and Recommend'
+title: 'Uses Page'
 layout: 'global.html'
 ---
 
@@ -8,7 +8,7 @@ layout: 'global.html'
 
 With that being said, I do still use the occasional proprietary software, but I try to avoid it as much as possible.
 
-## Basics
+# Software
 
 ### OS/Distro
 

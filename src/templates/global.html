@@ -3,8 +3,9 @@ navbar: [
   { text: 'Home', link: '/' },
   { text: 'About', link: '/about/' },
   { text: 'Now', link: '/now/' },
-  { text: 'GitHub', link: 'https://github.kraktoos.com' },
-  { text: 'Mastodon', link: 'https://mastodon.kraktoos.com' }
+  { text: 'Uses', link: '/uses/' },
+  { text: 'GitHub', link: 'https://github.kraktoos.com', external: true },
+  { text: 'Mastodon', link: 'https://mastodon.kraktoos.com', external: true }
 ]
 ---
 
@@ -12,44 +13,66 @@ navbar: [
 <html lang="en">
   <head>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta
+      content="{{ description | default: "I’m Kraktoos, a Portuguese high school student and tech enthusiast and this is my website." }}"
+      name="description"
+    />
+    <title>{{ title | default: "Kraktoos" }}</title>
+    <link type="application/rss+xml" rel="alternate" href="/feed.xml" />
     <style>
-      html {
+      html, body {
         font-family: sans-serif;
         line-height: 1.4;
+        background-color: var(--bg);
+        color: var(--txt);
       }
       :root {
-        color-scheme: light dark;
+        --bg: #e6ecec;
+        --txt: #080C0C;
+        --accent: #bb0c0c;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #080C0C;
+          --txt: #C6DFDD;
+          --accent: #64bfff;
+        }
       }
       a {
         text-decoration: none;
         text-underline-offset: 0.2rem;
-        color: #4db5ff;
+        color: var(--accent);
       }
       a:hover {
-        text-decoration: underline;
+        background-color: var(--accent);
+        color: var(--bg);
+      }
+      nav {
+        margin-bottom: 2rem;
       }
       nav > a {
         margin-right: 0.3rem;
       }
     </style>
-    <title>{{ title | default: "Kraktoos" }}</title>
   </head>
-  <body style="max-width: 52rem; margin: 0 auto; padding: 2rem 1rem">
+  <body style="max-width: 52rem; margin: 0 auto; padding: 2.5rem 1rem">
     <header>
       <nav>
         {% for item in navbar %}
           <a href="{{ item.link }}" 
           {% if page.url == item.link %}
-            style="font-weight: 600;"
+            style="font-weight: 600; text-decoration: underline; text-underline-offset: .4rem; text-shadow: 0 0 2.5rem var(--accent);"
           {% endif %}
-          
+          {% if item.external %}
+            target="_blank" rel="noopener"
+          {% endif %}
           >{{ item.text }}</a>
         {% endfor %}
       </nav>
     </header>
     <main>{{ content }}</main>
     <footer style="text-align: center;">
-      &copy; {{ "now" | date: "%Y" }} Kraktoos
+      &copy; {{ "now" | date: "%Y" }} Kraktoos. All rights reserved. &bull; <a href="/feed.xml" target="_blank">RSS</a>
     </footer>
   </body>
 </html>

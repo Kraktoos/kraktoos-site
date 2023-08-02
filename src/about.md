@@ -1,5 +1,7 @@
 ---
 layout: "global.html"
+title: "About Kraktoos"
+description: "About me"
 ---
 
 <h2>About me</h2>
