@@ -4,6 +4,7 @@ const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minif
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
+
   return {
     dir: {
       input: "src",
