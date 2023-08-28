@@ -14,7 +14,6 @@ In the past, I've worked on a few projects, mainly in C# (mainly for school), Py
 
 ### Contact
 
-You can find me over on [Mastodon](https://fosstodon.org/@kraktoos), [𝕏](https://x.com/kraktoos), as well as on [GitHub](https://github.com/kraktoos), and in most other places of the internet @kraktoos.
+You can find me over on [Mastodon](https://fosstodon.org/@kraktoos), [𝕏](https://x.com/kraktoos), as well as on [GitHub](https://github.com/kraktoos), and in most other places of the internet *@kraktoos*.
 
-You can also email me at
-[hello@kraktoos.com](mailto:hello@kraktoos.com)
+You can also email me at [hello@kraktoos.com](mailto:hello@kraktoos.com)

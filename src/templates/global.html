@@ -25,8 +25,8 @@ navbar: [
       html, body {
         font-family: sans-serif;
         line-height: 1.4;
-        background-color: var(--bg);
         color: var(--txt);
+        background: var(--bg);
       }
       :root {
         --bg: #e6ecec;
@@ -73,8 +73,28 @@ navbar: [
       </nav>
     </header>
     <main>{{ content }}</main>
-    <footer style="text-align: center;">
-      &copy; {{ "now" | date: "%Y" }} Kraktoos. All rights reserved. &bull; <a href="/feed.xml" target="_blank">RSS</a>
+    <footer>
+      <div style="display: flex; justify-content: center;">
+        <pre style="font-size: 10px; line-height: 12px;">
+         .,;'.
+        .kWMNKkdc:::codxkd,
+       .dWMMMMMMMMMMMMMMMMK;
+       cNMMMMMMMMMMMMMMMMMM0'
+      '0MMMMMMMMMMMMMMMMMMMWk.
+      :OOOOOOOOOOOOOOOOOOOOOO:
+ .:oooddddddddddddddddddddddddooo:.
+.oKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKo.
+ ...'lxxxxxxxxxxxxxxxxxxxxxxxxl'...
+    .xMNOxkkOXMMMMMMMMXOkkxONMx.
+     ;XNl  .lNMMMMMWkc;.   lNX;
+      cXNo.'0MMMMMM0'    .oNXc
+       ,ON0d0MMMMMMNkc::l0NO,
+        .;xKWMMMMMMMMMMWKx;.
+           .;ldxkOOkxdl;.</pre>
+      </div>
+      <div style="text-align: center">
+        &copy; {{ "now" | date: "%Y" }} Kraktoos. All rights reserved. &bull; <a href="/feed.xml" target="_blank">RSS</a>
+      </div>
     </footer>
   </body>
 </html>
