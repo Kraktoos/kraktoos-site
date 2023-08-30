@@ -29,31 +29,43 @@ navbar: [
         background: var(--bg);
       }
       :root {
-        --bg: #e6ecec;
-        --txt: #080C0C;
-        --accent: #bb0c0c;
+        --bg: rgb(230, 236, 236);
+        --txt: rgb(8, 12, 12);
+        --accent: rgb(187, 12, 12);
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #080C0C;
-          --txt: #e6ecec;
-          --accent: #64bfff;
+          --bg: rgb(8, 12, 12);
+          --txt: rgb(230, 236, 236);
+          --accent: rgb(100, 191, 255);
         }
       }
       a {
         text-decoration: none;
-        text-underline-offset: 0.2rem;
+        text-underline-offset: 0.35rem;
         color: var(--accent);
       }
       a:hover {
-        background-color: var(--accent);
-        color: var(--bg);
+        text-decoration: underline;
       }
       nav {
         margin-bottom: 2rem;
       }
       nav > a {
-        margin-right: 0.3rem;
+        margin-right: 0.05rem;
+        padding: 0.1rem 0.3rem;
+        border-radius: 4px;
+        transition: all 0.1s;
+      }
+      nav > a:hover {
+        text-decoration: none;
+        background-color: var(--accent);
+        color: var(--bg);
+      }
+      #active {
+        font-weight: 650;
+        text-decoration: underline;
+        text-shadow: 0 0 2rem var(--accent);
       }
     </style>
   </head>
@@ -63,7 +75,7 @@ navbar: [
         {% for item in navbar %}
           <a href="{{ item.link }}" 
           {% if page.url == item.link %}
-            style="font-weight: 600; text-decoration: underline; text-underline-offset: .4rem; text-shadow: 0 0 2.5rem var(--accent);"
+            id="active"
           {% endif %}
           {% if item.external %}
             target="_blank" rel="noopener"
