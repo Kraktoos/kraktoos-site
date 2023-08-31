@@ -1,5 +1,5 @@
 ---
-title: '"What Linux distro should I start with?"'
+title: '"Which Linux distro should I start with?"'
 date: 2023-03-07
 description: "After being asked so many times, it's finally time for me to address this question."
 ---
@@ -81,4 +81,4 @@ If you're still not sure which distro to use, you can install a virtual machine 
 
 Also, what many people don't know is that any distro can practically be turned into any other distro.
 
-So... Just pick one.
+So just pick one and start your Linux journey ASAP.
